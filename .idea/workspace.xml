@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26b9c1c9-92dc-499e-b725-ebc7e900cb3c" name="Changes" comment="Corrected Errors, final version for Assignment">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Date.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Venue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/EventTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicLandscape.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MusicLandscape.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicLandscape/entities/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Artist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicLandscape/entities/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicLandscape/tests/ArtistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/ArtistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicLandscape/tests/TrackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/TrackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "JulianKoe1998"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JulianKoe1998&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JulianKoe1998/MusicLandscape.git",
-    "accountId": "d4c4d421-a209-4b78-ab92-d6061d1b3de8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JulianKoe1998/MusicLandscape.git&quot;,
+    &quot;accountId&quot;: &quot;d4c4d421-a209-4b78-ab92-d6061d1b3de8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -58,7 +62,7 @@
     "TestNG.MusicLandscape.tests.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jkoefing/OneDrive - sound-solutions/HomeDrive/FH/4.Semester/ComputerScience/MusicLandscape",
+    "last_opened_file_path": "C:/Users/jkoefing/OneDrive - sound-solutions/HomeDrive/FH/4.Semester/ComputerScience/Others/Katharina2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,12 +72,17 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jkoefing\IdeaProjects\MusicLandscape\src\MusicLandscape\tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jkoefing\OneDrive - sound-solutions\HomeDrive\FH\4.Semester\ComputerScience\MusicLandscape\src\MusicLandscape\entities" />
+      <recent name="C:\Users\jkoefing\OneDrive - sound-solutions\HomeDrive\FH\4.Semester\ComputerScience\MusicLandscape\src\MusicLandscape\tests" />
     </key>
   </component>
   <component name="RunManager">
@@ -116,8 +125,20 @@
       <option name="presentableId" value="Default" />
       <updated>1715607603408</updated>
       <workItem from="1715607604563" duration="175000" />
-      <workItem from="1715607883919" duration="996000" />
+      <workItem from="1715607883919" duration="1356000" />
+      <workItem from="1715609745375" duration="41000" />
+      <workItem from="1715709908531" duration="415000" />
+      <workItem from="1716190805071" duration="2752000" />
     </task>
+    <task id="LOCAL-00001" summary="Corrected Errors, final version for Assignment">
+      <option name="closed" value="true" />
+      <created>1715609125185</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715609125185</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,136 +1,164 @@
 package MusicLandscape.entities;
 
-// Class representing a musical track
+// Define the class
 public class Track {
-    // Fields of the class
+    // Declare private member variables
     private String title;
-    private int duration;  // Duration in seconds
-    private Artist writer = new Artist();  // The artist who wrote the track
-    private Artist performer = new Artist();  // The artist who performs the track
-    private int year;  // Release year of the track
+    private int duration;
+    private Artist writer = new MusicLandscape.entities.Artist(); // Initialize writer with default artist
+    private Artist performer = new MusicLandscape.entities.Artist(); // Initialize performer with default artist
+    private int year;
 
     // Default constructor
-    public Track() {
+    public Track(){
+        // Initialize member variables
+        this.title = null;
+        this.duration = 0;
+        this.writer = new Artist("Default writer");
+        this.performer = new Artist("Default performer");
+        this.year = 1900;
     }
 
-    // Getter for the year of the track
-    public int getYear() {
-        return this.year;
+    // Copy constructor
+    public Track(Track t){
+        // Copy member variables
+        this.title = t.title;
+        this.duration = t.duration;
+        this.writer = new Artist(t.writer);
+        this.performer = new Artist(t.performer);
+        this.year = t.year;
     }
 
-    // Setter for the year; returns false if year is valid, true otherwise
-    public boolean setYear(int year) {
-        if (year > 1899 && year < 3000) {
-            this.year = year;
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    // Getter for the duration of the track
-    public int getDuration() {
-        return this.duration;
-    }
-
-    // Setter for the duration; ensures duration is non-negative
-    public void setDuration(int duration) {
-        if (duration >= 0) {
-            this.duration = duration;
-        } else {
-            this.duration = 0;
-        }
-    }
-
-    // Getter for the track title, defaults to "unknown title" if not set or empty
-    public String getTitle() {
-        return this.title != null && !this.title.trim().isEmpty() ? this.title : (this.title = "unknown title");
-    }
-
-    // Setter for the track title
-    public void setTitle(String title) {
+    // Constructor with specified title
+    public Track(String title){
+        // Initialize member variables with provided title
         this.title = title;
+        this.duration = 0;
+        this.writer = new Artist("Default writer");
+        this.performer = new Artist("Default performer");
+        this.year = 1900;
     }
 
-    // Getter for the writer (Artist object)
+    // Getter and setter for year
+    public int getYear() {
+        return year;
+    }
+    public boolean setYear(int year){
+        if(year > 1899 && year < 3000) { // Check if year is within valid range
+            this.year = year; // Set year
+        } else {
+            return true; // Return true if year is out of range
+        }
+        return false; // Return false otherwise
+    }
+
+    // Getter and setter for duration
+    public int getDuration() {
+        return duration;
+    }
+    public void setDuration(int duration) {
+        if(duration >= 0){ // Check if duration is non-negative
+            this.duration = duration; // Set duration
+        }
+        else {
+            this.duration = 0; // Set duration to 0 if negative
+        }
+    }
+
+    // Getter and setter for title
+    public String getTitle() {
+        if (title == null || title.trim().isEmpty()) { // Check if title is null or empty
+            return this.title = "unknown title"; // Return "unknown title" if null or empty
+        } else {
+            return this.title; // Return title
+        }
+    }
+    public void setTitle(String title) {
+        this.title = title; // Set title
+    }
+
+    // Getter and setter for writer
     public Artist getWriter() {
-        return this.writer;
+        return writer;
     }
-
-    // Setter for the writer, prevents setting a null writer
     public void setWriter(Artist writer) {
-        if (writer != null) {
-            this.writer = writer;
+        if (writer != null) { // Check if writer is not null
+            this.writer = writer; // Set writer
         }
     }
 
-    // Getter for the performer (Artist object)
+    // Getter and setter for performer
     public Artist getPerformer() {
-        return this.performer;
+        return performer;
     }
-
-    // Setter for the performer, prevents setting a null performer
     public void setPerformer(Artist performer) {
-        if (performer != null) {
-            this.performer = performer;
+        if (performer != null) { // Check if performer is not null
+            this.performer = performer; // Set performer
         }
     }
 
-    // Checks if the writer is known (not null and has a name)
+    // Method to check if writer is known
     public boolean writerIsKnown() {
-        return this.writer != null && this.writer.getName() != null;
+        // Check if writer object and its name are not null
+        return writer != null && writer.getName() != null;
     }
 
-    // Generates a string representation of the track with concise information
+    // Method to get string representation of track info
     public String getString() {
         String trackInfo = "";
-        String shortenPerformer;
-        if (this.title != null && !this.title.isEmpty()) {
-            shortenPerformer = this.title.substring(0, Math.min(this.title.length(), 10));
-            if ("song".equals(shortenPerformer.toLowerCase())) {
-                trackInfo = trackInfo + "      song by";
+
+        // Append title or "unknown" if title is null
+        if (title != null && !title.isEmpty()) {
+            String shortenedTitle = title.substring(0, Math.min(title.length(), 10)); // Take first 10 characters of title
+            if ("song".equals(shortenedTitle.toLowerCase())) {
+                trackInfo += "      song by";
             } else {
-                trackInfo = trackInfo + shortenPerformer + " by ";
+                trackInfo += shortenedTitle + " by ";
             }
         } else {
-            trackInfo = trackInfo + "   unknown by ";
+            trackInfo += "   unknown by ";
         }
 
-        if (this.writer != null) {
-            if (this.writer.getName() == null) {
-                trackInfo = trackInfo + "    unknown ";
+        // Append writer or "unknown" if writer is null
+        if(writer != null) {
+            if(writer.getName() == null) {
+                trackInfo += "    unknown ";
             } else {
-                shortenPerformer = this.writer.getName().substring(0, Math.min(this.writer.getName().length(), 10));
-                if (shortenPerformer.equals("writer")) {
-                    trackInfo = trackInfo + "    " + shortenPerformer + " ";
+                String shortenWriter = writer.getName().substring(0, Math.min(writer.getName().length(), 10)); // Take first 10 characters of writer name
+                if(shortenWriter.equals("writer")) {
+                    trackInfo += "    " + shortenWriter + " ";
                 } else {
-                    trackInfo = trackInfo + shortenPerformer + " ";
+                    trackInfo += shortenWriter + " ";
                 }
             }
         } else {
-            trackInfo = trackInfo + "   unknown ";
+            trackInfo += "   unknown ";
         }
 
-        if (this.performer != null) {
-            if (this.performer.getName() == null) {
-                trackInfo = trackInfo + "performed by    unknown";
+        // Append performer or "unknown" if performer is null
+        if (performer != null) {
+            if (performer.getName() == null) {
+                trackInfo += "performed by    unknown";
             } else {
-                shortenPerformer = this.performer.getName().substring(0, Math.min(this.performer.getName().length(), 10));
-                if (shortenPerformer.equals("performer")) {
-                    trackInfo = trackInfo + "performed by  " + shortenPerformer;
+                String shortenPerformer = performer.getName().substring(0, Math.min(performer.getName().length(), 10)); // Take first 10 characters of performer name
+                if(shortenPerformer.equals("performer")){
+                    trackInfo += "performed by  " + shortenPerformer;
                 } else {
-                    trackInfo = trackInfo + "performed by " + shortenPerformer;
+                    trackInfo += "performed by " + shortenPerformer;
                 }
             }
         } else {
-            trackInfo = trackInfo + "performed by    unknown";
+            trackInfo += "performed by    unknown";
         }
 
-        // Calculate and format the duration as MM:SS
-        int minutes = this.duration / 60;
-        int seconds = this.duration % 60;
+        // Format duration as minutes and seconds
+        int minutes = duration / 60;
+        int seconds = duration % 60;
         String durationString = String.format(" (%02d:%02d)", minutes, seconds);
-        trackInfo = trackInfo + durationString;
-        return trackInfo;
+
+        // Append duration
+        trackInfo += durationString;
+
+        return trackInfo.trim(); // Trim leading/trailing whitespace
     }
 }

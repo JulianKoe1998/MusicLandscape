@@ -1,46 +1,34 @@
 package MusicLandscape.entities;
 
-/**
- * Represents an Artist with a name.
- */
 public class Artist {
-    // Attribute to hold the name of the artist
-    private String name;
+    private String name; // Declare private member variable
 
-    /**
-     * Default constructor.
-     * Initializes the artist with no name.
-     */
+    // Default constructor with unknown name
     public Artist() {
-        this.name = null;
+        this.name = "unknown";
     }
 
-    /**
-     * Constructor with artist name.
-     * @param name The name of the artist.
-     */
+    // Copy constructor
+    public Artist(Artist a) {
+        this.name = a.name;
+    }
+
+    // Constructor with specified name
     public Artist(String name) {
         this.name = name;
     }
 
-    /**
-     * Sets the name of the artist.
-     * If the provided name is null or empty, the name is set to null.
-     * @param name The new name of the artist.
-     */
+    // Method to set the name, handles null or empty values
     public void setName(String name) {
-        if (name != null && !name.trim().isEmpty()) {
-            this.name = name;  // Set name if it is not null or empty
+        if (name == null || name.trim().isEmpty()) {
+            this.name = "unknown";
         } else {
-            this.name = null;  // Reset name to null if input is invalid
+            this.name = name;
         }
     }
 
-    /**
-     * Gets the name of the artist.
-     * @return The name of the artist or null if no name has been set.
-     */
+    // Method to get the name
     public String getName() {
-        return this.name;
+        return name;
     }
 }
