@@ -1,11 +1,10 @@
-// **************************************************
+package MusicLandscape.entities;// **************************************************
 //		
 //       git.rev = 234
 //  git.revision = fdd4980be270473bdd7e8206afeda65ab6e4c3a4
-//         stage = ES02
+//         stage = ES03
 //
 // ***************************************************
-package MusicLandscape;
 
 import java.util.Scanner;
 
@@ -14,7 +13,7 @@ import java.util.Scanner;
  * @author TeM
  * @author JS
  * @version 234
- * @Stage ES02
+ * @Stage ES03
  *
  */
 public class Date implements  java.lang.Comparable<Date>
@@ -221,7 +220,7 @@ public class Date implements  java.lang.Comparable<Date>
 	}
 
 	/**
-	 * returns the Julian Day Number for specified Date given as year, month and
+	 * returns the Julian Day Number for specified MusicLandscape.entities.Date given as year, month and
 	 * day (in Gregorian calendar) (for formulas see
 	 * http://en.wikipedia.org/wiki/Julian_day)
 	 * 
@@ -245,7 +244,7 @@ public class Date implements  java.lang.Comparable<Date>
 	}
 
 	/**
-	 *  @return  the Julian Day Number for this Date (for formulas see
+	 *  @return  the Julian Day Number for this MusicLandscape.entities.Date (for formulas see
 	 * http://en.wikipedia.org/wiki/Julian_day)
 	 * 
 	 */
@@ -278,7 +277,7 @@ public class Date implements  java.lang.Comparable<Date>
 	}
 
 	/**
-	 * @return  returns the Lilian Date Number for this Date for details see
+	 * @return  returns the Lilian MusicLandscape.entities.Date Number for this MusicLandscape.entities.Date for details see
 	 * http://en.wikipedia.org/wiki/Lilian_date
 	 * 
 
@@ -289,7 +288,7 @@ public class Date implements  java.lang.Comparable<Date>
 
 	/**
 	 * 
-	 * returns the Lilian Date Number for the Date given as year, month, and day
+	 * returns the Lilian MusicLandscape.entities.Date Number for the MusicLandscape.entities.Date given as year, month, and day
 	 * (in Grgorian calendar) (for details see
 	 * http://en.wikipedia.org/wiki/Lilian_date)
 	 * 
@@ -306,7 +305,7 @@ public class Date implements  java.lang.Comparable<Date>
 	}
 
 	/**
-	 * sets the current Date to the Date given as Julian Day Number
+	 * sets the current MusicLandscape.entities.Date to the MusicLandscape.entities.Date given as Julian Day Number
 	 * 
 	 * @param jul
 	 *            Julian Day Number

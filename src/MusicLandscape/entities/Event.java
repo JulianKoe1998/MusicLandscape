@@ -1,77 +1,108 @@
 package MusicLandscape.entities;
 
-// Import Date class + Venue
-import MusicLandscape.Date;
-import MusicLandscape.Venue;
-
-// Define the class
+// Class representing an event
 public class Event {
-    // Declare private member variables
-    private Artist artist;
-    private int attendees;
-    private Date date;
-    private String description;
-    private Venue venue;
+    // Private member variables
+    private Artist artist; // The artist performing at the event
+    private int attendees; // Number of attendees at the event
+    private Date date; // MusicLandscape.entities.Date of the event
+    private String description; // Description of the event
+    private Venue venue; // MusicLandscape.entities.Venue of the event
 
     // Default constructor
-    public Event(){
-        this.artist = new Artist(); // Initialize artist with default constructor
-        this.description = ""; // Set description to empty string
+    public Event() {
+        // Initialize artist with a default unknown artist and an empty description
+        this.artist = new Artist();
+        this.description = "";
     }
 
-    // Getter and setter for artist
+    // Copy constructor
+    public Event(Event e) {
+        // Create copies of all fields from the provided event
+        this.artist = new Artist(e.getArtist());
+        this.attendees = e.getAttendees();
+        this.date = new Date(e.getDate());
+        this.description = e.getDescription();
+        this.venue = new Venue(e.getVenue());
+    }
+
+    // Getter and setter methods
     public Artist getArtist() {
         return artist;
     }
+
     public void setArtist(Artist artist) {
-        if(artist != null) { // Check if artist is not null
-            this.artist = artist; // Set artist
+        if (artist != null) {
+            this.artist = artist;
         }
     }
 
-    // Getter and setter for venue
-    public Venue getVenue(){
+    public Venue getVenue() {
         return venue;
     }
+
     public void setVenue(Venue venue) {
-        this.venue = venue; // Set venue
+        this.venue = venue;
     }
 
-    // Getter and setter for date
     public Date getDate() {
-        if(date == null){
-            return null; // Return null if date is null
+        if (date == null) {
+            return null;
         } else {
-            return new Date(date); // Return a copy of the date
-        }
-    }
-    public void setDate(Date date) {
-        if(date != null) { // Check if date is not null
-            this.date = new Date(date); // Set date with a copy of the provided date
-        } else {
-            this.date = null; // Set date to null
+            return new Date(date);
         }
     }
 
-    // Getter and setter for attendees
+    public void setDate(Date date) {
+        if (date != null) {
+            this.date = new Date(date);
+        } else {
+            this.date = null;
+        }
+    }
+
     public int getAttendees() {
         return attendees;
     }
+
     public void setAttendees(int attendees) {
-        if(attendees >= 0) { // Check if attendees is non-negative
-            this.attendees = attendees; // Set attendees
+        if (attendees >= 0) {
+            this.attendees = attendees;
         }
     }
 
-    // Getter and setter for description
     public String getDescription() {
-        return description; // Return description
+        return description;
     }
+
     public void setDescription(String description) {
-        if(description != null){ // Check if description is not null
-            this.description = description; // Set description
+        if (description != null) {
+            this.description = description;
         } else {
-            this.description = ""; // Set description to empty string
+            this.description = "";
         }
+    }
+
+    // Override toString method to provide a string representation of the event
+    @Override
+    public String toString() {
+        // Get string representations of fields or default to "unknown" if null or empty
+        String artistStr = (artist != null && artist.toString() != null && !artist.toString().isEmpty()) ? artist.toString() : "unknown";
+        String venueStr = (venue != null && venue.getName() != null && !venue.getName().isEmpty()) ? venue.getName() : "unknown";
+        String dateStr = (date != null) ? date.toString() : "unknown"; // Assuming MusicLandscape.entities.Date class has a proper toString method
+        String descriptionStr = (description != null && !description.isEmpty()) ? description : "unknown";
+        String attendeesStr = (attendees > 0) ? String.valueOf(attendees) : "unknown";
+
+        // Assuming impact is calculated in some way, otherwise set it to "unknown"
+        String impactStr = String.valueOf(impact());
+
+        // Format the string representation of the event
+        return String.format("%s @ %s on %s%n%s%n(%s attending (%s))",
+                artistStr, venueStr, dateStr, descriptionStr, attendeesStr, impactStr);
+    }
+
+    // Method to calculate the impact of the event
+    public int impact() {
+        return (attendees * 2); // Assuming a simple impact calculation
     }
 }

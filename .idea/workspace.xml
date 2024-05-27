@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26b9c1c9-92dc-499e-b725-ebc7e900cb3c" name="Changes" comment="Corrected Errors, final version for Assignment">
-      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Date.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Venue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/EventTest.java" afterDir="false" />
+    <list default="true" id="26b9c1c9-92dc-499e-b725-ebc7e900cb3c" name="Changes" comment="Assignment for Exercise2">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mockito_all.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Concert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/TVShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/ConcertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/TVShowTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicLandscape/entities/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicLandscape/entities/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicLandscape/entities/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicLandscape/entities/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicLandscape/entities/Venue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/entities/Venue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicLandscape/tests/ArtistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/ArtistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicLandscape/tests/EventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/EventTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicLandscape/tests/TrackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicLandscape/tests/TrackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +54,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2gPmUQyEHdgmrXGB3rhutRk8h2G" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,10 +68,11 @@
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.MusicLandscape.tests.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jkoefing/OneDrive - sound-solutions/HomeDrive/FH/4.Semester/ComputerScience/Others/Katharina2",
+    "last_opened_file_path": "C:/Users/jkoefing/OneDrive - sound-solutions/HomeDrive/FH/4.Semester/ComputerScience/Others/S03",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,7 +138,8 @@
       <workItem from="1715607883919" duration="1356000" />
       <workItem from="1715609745375" duration="41000" />
       <workItem from="1715709908531" duration="415000" />
-      <workItem from="1716190805071" duration="2752000" />
+      <workItem from="1716190805071" duration="3038000" />
+      <workItem from="1716831532364" duration="4147000" />
     </task>
     <task id="LOCAL-00001" summary="Corrected Errors, final version for Assignment">
       <option name="closed" value="true" />
@@ -138,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715609125185</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Assignment for Exercise2">
+      <option name="closed" value="true" />
+      <created>1716193656521</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716193656521</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +176,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Corrected Errors, final version for Assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected Errors, final version for Assignment" />
+    <MESSAGE value="Assignment for Exercise2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment for Exercise2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
